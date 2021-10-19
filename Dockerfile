@@ -32,7 +32,7 @@ COPY content/stop-xmlserver.sh /opt/ibm/Curam/xmlserver/stop-xmlserver.sh
 #     && chmod -c +x /opt/ibm/Curam/xmlserver/*.sh
 
 # Final image
-FROM ibmjava8-sdk-ubi8-minimal:latest
+FROM quay.io/julescheindjou/ibmjava8-sdk-ubi8-minimal:latest
 
 EXPOSE 1800
 WORKDIR /opt/ibm/Curam/xmlserver

@@ -16,10 +16,10 @@
 
 global:
   images:
-    registry: &imageRegistry minikube.local:5000
+    repository: replace
     imageLibrary: ''
     imagePrefix: ''
-    imageTag: latest
+    imageTag: replace
     pullPolicy: Always
   imagePullSecret:
     secretName: ''

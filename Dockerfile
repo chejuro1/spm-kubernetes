@@ -53,7 +53,7 @@ RUN rpm -e --nodeps tzdata \
 RUN mkdir -p /opt/ibm/Curam/xmlserver \
     && chmod -c g+w /etc/passwd $JAVA_HOME/jre/lib/security/cacerts
 
-COPY --from=ExtractAndMod --chown=1001:0 /opt/apache-ant-${ANT_VERSION} /opt/apache-ant-${ANT_VERSION}
+# COPY --from=ExtractAndMod --chown=1001:0 /opt/apache-ant-${ANT_VERSION} /opt/apache-ant-${ANT_VERSION}
 COPY --from=ExtractAndMod --chown=1001:0 /opt/ibm/Curam /opt/ibm/Curam
 
 USER 1001

@@ -1,0 +1,318 @@
+apiVersion: v1
+entries:
+  apps:
+  - apiVersion: v2
+    appVersion: 8.0.0.0
+    created: "2021-10-22T14:40:49.706713-04:00"
+    dependencies:
+    - alias: sch
+      condition: global.sch.enabled
+      name: ibm-sch
+      repository: '@sch'
+      version: ^1.2.19
+    description: Helm Chart for Deployment of Curam SPM Applications within a Kubernetes
+      Cluster  Documentation For complete documentation please see the chart README  License
+      Licensed under the Apache License, Version 2.0 (the "License"); you may not
+      use this file except in compliance with the License. You may obtain a copy of
+      the License at  http://www.apache.org/licenses/LICENSE-2.0
+    digest: 9a7e451474ccc16cae19cc71a732151a070a9535d56d0e9d57fb4b957df2c263
+    home: https://www.ibm.com/watson-health/solutions/social-program-management
+    icon: https://avatars2.githubusercontent.com/u/1459110
+    keywords:
+    - Liberty
+    - Minikube
+    - IKS
+    - OpenShift
+    - RHOS
+    - Curam
+    - SPM
+    - amd64
+    - deploy
+    - DevOps
+    - Commercial
+    - Limited
+    - Other
+    kubeVersion: '>=1.19'
+    maintainers:
+    - name: IBM
+    - name: Cúram SPM Dev Team
+      url: https://github.com/IBM/spm-kubernetes
+    name: apps
+    sources:
+    - https://github.com/IBM/spm-kubernetes
+    urls:
+    - https://chejuro1.github.io/spm-kubernetes/apps-21.9.0.tgz
+    version: 21.9.0
+  batch:
+  - apiVersion: v2
+    appVersion: 8.0.0.0
+    created: "2021-10-22T14:40:49.708829-04:00"
+    dependencies:
+    - alias: sch
+      condition: global.sch.enabled
+      name: ibm-sch
+      repository: '@sch'
+      version: ^1.2.19
+    description: Helm Chart for SPM Batch within a Kubernetes Cluster  Documentation
+      For complete documentation please see the chart README  License Licensed under
+      the Apache License, Version 2.0 (the "License"); you may not use this file except
+      in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0
+    digest: d76967347129b94f8ef816817096f11838985a17d655e079e4f518b6efb5a87f
+    home: https://www.ibm.com/watson-health/solutions/social-program-management
+    icon: https://avatars2.githubusercontent.com/u/1459110
+    keywords:
+    - Liberty
+    - Minikube
+    - IKS
+    - OpenShift
+    - RHOCP
+    - Curam
+    - SPM
+    - amd64
+    - deploy
+    - DevOps
+    - Commercial
+    - Limited
+    - Other
+    kubeVersion: '>=1.19'
+    maintainers:
+    - name: IBM
+    - name: Cúram SPM Dev Team
+      url: https://github.com/IBM/spm-kubernetes
+    name: batch
+    sources:
+    - https://github.com/IBM/spm-kubernetes
+    urls:
+    - https://chejuro1.github.io/spm-kubernetes/batch-21.9.0.tgz
+    version: 21.9.0
+  mqserver:
+  - apiVersion: v2
+    appVersion: 8.0.0.0
+    created: "2021-10-22T14:40:49.710787-04:00"
+    dependencies:
+    - alias: sch
+      condition: global.sch.enabled
+      name: ibm-sch
+      repository: '@sch'
+      version: ^1.2.19
+    description: Helm Chart for Deployment of MQ server for SPM within a Kubernetes
+      Cluster  Documentation For complete documentation please see the chart README  License
+      Licensed under the Apache License, Version 2.0 (the "License"); you may not
+      use this file except in compliance with the License. You may obtain a copy of
+      the License at  http://www.apache.org/licenses/LICENSE-2.0
+    digest: 4be03dc743aeffdfde325b294f6b75d5ddd17a0843b4071811afe539d25b0dbb
+    home: https://www.ibm.com/watson-health/solutions/social-program-management
+    icon: https://avatars2.githubusercontent.com/u/1459110
+    keywords:
+    - Liberty
+    - Minikube
+    - IKS
+    - OpenShift
+    - RHOCP
+    - Curam
+    - SPM
+    - amd64
+    - deploy
+    - DevOps
+    - Commercial
+    - Limited
+    - Middleware
+    kubeVersion: '>=1.19'
+    maintainers:
+    - name: IBM
+    - name: Cúram SPM Dev Team
+      url: https://github.com/IBM/spm-kubernetes
+    name: mqserver
+    sources:
+    - https://github.com/IBM/spm-kubernetes
+    urls:
+    - https://chejuro1.github.io/spm-kubernetes/mqserver-21.9.0.tgz
+    version: 21.9.0
+  spm:
+  - apiVersion: v2
+    appVersion: 8.0.0.0
+    created: "2021-10-22T14:40:49.726277-04:00"
+    dependencies:
+    - name: apps
+      repository: '@local-development'
+      version: ~21.9.0
+    - name: batch
+      repository: '@local-development'
+      version: ~21.9.0
+    - name: uawebapp
+      repository: '@local-development'
+      version: ~21.9.0
+    - name: web
+      repository: '@local-development'
+      version: ~21.9.0
+    - name: mqserver
+      repository: '@local-development'
+      version: ~21.9.0
+    - name: xmlserver
+      repository: '@local-development'
+      version: ~21.9.0
+    - alias: sch
+      name: ibm-sch
+      repository: '@sch'
+      version: ^1.2.19
+    description: Umbrella Helm Chart for Full Curam Deployment of SPM within a Kubernetes
+      Cluster  Documentation For complete documentation please see the chart README  License
+      Licensed under the Apache License, Version 2.0 (the "License"); you may not
+      use this file except in compliance with the License. You may obtain a copy of
+      the License at  http://www.apache.org/licenses/LICENSE-2.0
+    digest: 0d88f8f41ca424b535e5f68a252f897c9185cf39b4b00509c2ada3161ecd9500
+    home: https://www.ibm.com/watson-health/solutions/social-program-management
+    icon: https://avatars2.githubusercontent.com/u/1459110
+    keywords:
+    - Liberty
+    - Minikube
+    - IKS
+    - OpenShift
+    - RHOCP
+    - Curam
+    - SPM
+    - amd64
+    - deploy
+    - DevOps
+    - Commercial
+    - Limited
+    - Other
+    kubeVersion: '>=1.19'
+    maintainers:
+    - name: IBM
+    - name: Cúram SPM Dev Team
+      url: https://github.com/IBM/spm-kubernetes
+    name: spm
+    sources:
+    - https://github.com/IBM/spm-kubernetes
+    urls:
+    - https://chejuro1.github.io/spm-kubernetes/spm-21.9.0.tgz
+    version: 21.9.0
+  uawebapp:
+  - apiVersion: v2
+    appVersion: 8.0.0.0
+    created: "2021-10-22T14:40:49.729108-04:00"
+    dependencies:
+    - alias: sch
+      condition: global.sch.enabled
+      name: ibm-sch
+      repository: '@sch'
+      version: ^1.2.19
+    description: Helm Chart for deploying the Universal Access React application.  Documentation
+      For complete documentation please see the chart README  License Licensed under
+      the Apache License, Version 2.0 (the "License"); you may not use this file except
+      in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0
+    digest: f05e2ed434c919be72a331a3e5832f7202fd7d29c7ac3493d6c2d624ed91b6eb
+    home: https://www.ibm.com/watson-health/solutions/social-program-management
+    icon: https://avatars2.githubusercontent.com/u/1459110
+    keywords:
+    - Liberty
+    - Minikube
+    - IKS
+    - OpenShift
+    - RHOCP
+    - Curam
+    - SPM
+    - amd64
+    - deploy
+    - DevOps
+    - Commercial
+    - Limited
+    - Other
+    kubeVersion: '>=1.19'
+    maintainers:
+    - name: IBM
+    - name: Cúram SPM Dev Team
+      url: https://github.com/IBM/spm-kubernetes
+    name: uawebapp
+    sources:
+    - https://github.com/IBM/spm-kubernetes
+    urls:
+    - https://chejuro1.github.io/spm-kubernetes/uawebapp-21.9.0.tgz
+    version: 21.9.0
+  web:
+  - apiVersion: v2
+    appVersion: 8.0.0.0
+    created: "2021-10-22T14:40:49.730857-04:00"
+    dependencies:
+    - alias: sch
+      condition: global.sch.enabled
+      name: ibm-sch
+      repository: '@sch'
+      version: ^1.2.19
+    description: Chart for SPM webserver within a Kubernetes Cluster  Documentation
+      For complete documentation please see the chart README  License Licensed under
+      the Apache License, Version 2.0 (the "License"); you may not use this file except
+      in compliance with the License. You may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0
+    digest: 392cd02fb575a19455f0ccf0df4a8d80fb3d6e686e6b347df5b2074d53fc3c61
+    home: https://www.ibm.com/watson-health/solutions/social-program-management
+    icon: https://avatars2.githubusercontent.com/u/1459110
+    keywords:
+    - Liberty
+    - Minikube
+    - IKS
+    - OpenShift
+    - RHOCP
+    - Curam
+    - SPM
+    - amd64
+    - deploy
+    - DevOps
+    - Commercial
+    - Limited
+    - Middleware
+    kubeVersion: '>=1.19'
+    maintainers:
+    - name: IBM
+    - name: Cúram SPM Dev Team
+      url: https://github.com/IBM/spm-kubernetes
+    name: web
+    sources:
+    - https://github.com/IBM/spm-kubernetes
+    urls:
+    - https://chejuro1.github.io/spm-kubernetes/web-21.9.0.tgz
+    version: 21.9.0
+  xmlserver:
+  - apiVersion: v2
+    appVersion: 8.0.0.0
+    created: "2021-10-22T14:40:49.732484-04:00"
+    dependencies:
+    - alias: sch
+      condition: global.sch.enabled
+      name: ibm-sch
+      repository: '@sch'
+      version: ^1.2.19
+    description: Helm Chart for XMLServer Container Deployment of SPM within a Kubernetes
+      Cluster  Documentation For complete documentation please see the chart README  License  Licensed
+      under the Apache License, Version 2.0 (the "License"); you may not use this
+      file except in compliance with the License. You may obtain a copy of the License
+      at  http://www.apache.org/licenses/LICENSE-2.0
+    digest: aaa73c6e48c3da7efb9ae1b811457a870ef0b9397e494b39ff7c01b30c6b8670
+    home: https://www.ibm.com/watson-health/solutions/social-program-management
+    icon: https://avatars2.githubusercontent.com/u/1459110
+    keywords:
+    - Liberty
+    - Minikube
+    - IKS
+    - OpenShift
+    - RHOCP
+    - Curam
+    - SPM
+    - amd64
+    - deploy
+    - DevOps
+    - Commercial
+    - Limited
+    - Middleware
+    kubeVersion: '>=1.19'
+    maintainers:
+    - name: IBM
+    - name: Cúram SPM Dev Team
+      url: https://github.com/IBM/spm-kubernetes
+    name: xmlserver
+    sources:
+    - https://github.com/IBM/spm-kubernetes
+    urls:
+    - https://chejuro1.github.io/spm-kubernetes/xmlserver-21.9.0.tgz
+    version: 21.9.0
+generated: "2021-10-22T14:40:49.700177-04:00"
